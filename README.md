@@ -16,12 +16,29 @@ show track/untrack files
 Branch &rarr; Is a ramification from a certain point of code. For general idea, imagine that git is a tree. The trunk would be the base code and braches are the ramifications based on this (note that not necessary every branch has to have the same base code).
 
 ---
-3. ```git add . ``` or ```git add specificFile.txt```
+
+3. ```git checkout -b develop```
+Create a new branch named develop
+
+4. ```git add . ``` or ```git add specificFile.txt```
 It add files/file into a commit
 
-4. ```git commit -m "message"```
+5. ```git commit -m "message"```
 The comment that goes to explain why/what you are changing.
 For commits there are common patterns that most of developers are using. You can read more about this [here](https://github.com/helderberto/dotfiles/blob/main/git/.gittemplates/commitrkf)
 
-5. ```git checkout -b develop```
-Create a new branch named example
+6. ```git push``` or ```git push origin master``` or ```git push origin HEAD:refs/for/develop```
+Publish your commit
+
+---
+**NOTE**
+
+The first time you push to your remote do it like so:
+
+```git push -u origin develop```
+
+The -u flag stands for ```--set-upstream```.  After the first time you only need to do it like this:
+
+```git push```
+
+---
